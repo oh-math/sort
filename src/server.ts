@@ -2,8 +2,6 @@ import { highlight } from "cli-highlight";
 import sortBy from "lodash.sortby";
 import { lesoes, lesoesMachucados, lesoesValor } from "./jsons/mainJson";
 
-const sortedByName = sortBy(lesoesMachucados, ["nome"]);
-
 const orderByGroupedvalue = (groupedValueExists: boolean, lesaoObj) => {
   if (groupedValueExists) {
     return sortBy(
@@ -47,13 +45,18 @@ const decideSort = (lesao) => {
   }
 };
 
-const finalSortedResult = sortedByName.map((lesao) => {
-  return {
-    ...lesao,
-    personalidade: decideSort(lesao),
-  };
-});
+const sortedResult = (obj) => {
+  const sortedByName = sortBy(obj, ["nome"]);
+
+  return sortedByName.map((lesao) => {
+    return {
+      ...lesao,
+      personalidade: decideSort(lesao),
+    };
+  });
+};
 
 console.log(
-  highlight(JSON.stringify(finalSortedResult, null, 4), { language: "json" })
+  highlight(JSON.stringify(sortedResult(lesoesValor), null, 4), { language: "json" })
 );
+

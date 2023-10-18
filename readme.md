@@ -1,14 +1,8 @@
 # Documentação da funcionalidade da ordenação
 
-### Váriaveis
-
-**`sortedByName`** - Objeto ordenado pela precência principal
-
-**`finalSortedResult`** - Objeto final ordenado
-
----
-
 ### Funções
+
+**_finalSortedResult_** - Objeto final ordenado
 
 **_orderByGroupedvalue_** - Ordena por grupo CASO os grupos existam no objeto
 
