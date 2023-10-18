@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    /* Modules */
+    "module": "commonjs",                                
+    /* Emit */
+    "sourceMap": true,                                
+    "outDir": "dist",                               
+    /* Interop Constraints */
+    "esModuleInterop": true,                             
+    "forceConsistentCasingInFileNames": true,            
+
+    /* Type Checking */
+    "strict": true,                                     
+    "noUnusedParameters": false,                       
+    "noImplicitReturns": true,                        
+    "skipLibCheck": true,                                 
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+  },
+  "include": ["src/**/*.ts"]
+}
