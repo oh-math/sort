@@ -45,7 +45,7 @@ const decideSort = (lesao) => {
   }
 };
 
-const sortedResult = (obj) => {
+export const sortedResult = (obj) => {
   const sortedByName = sortBy(obj, ["nome"]);
 
   return sortedByName.map((lesao) => {
@@ -56,7 +56,9 @@ const sortedResult = (obj) => {
   });
 };
 
-console.log(
-  highlight(JSON.stringify(sortedResult(lesoesValor), null, 4), { language: "json" })
-);
+// console.log(
+//   highlight(JSON.stringify(sortedResult(lesoesValor), null, 4), {
+//     language: "json",
+//   })
+// );
 
